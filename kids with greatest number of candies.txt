@@ -1,0 +1,29 @@
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+var kidsWithCandies = function(candies, extraCandies) {
+    let temp=0;
+    let arr=[];
+    let finalResult=[];
+    for(let i=0;i<candies.length;i++){
+      //  console.log(candies);
+       arr[i]=candies[i]+extraCandies;
+    }
+    console.log(arr);
+    candies.sort(function(a,b){return b-a});
+    temp=candies[0];
+     console.log(candies);
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]<temp){
+            finalResult[i]=false;
+        }else{
+            finalResult[i]=true;
+        }
+    }
+   
+   
+
+    return finalResult;
+};
